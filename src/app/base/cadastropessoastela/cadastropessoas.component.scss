@@ -1,0 +1,28 @@
+.flex {
+	display: flex;
+    overflow-y: auto;
+}
+
+.ListaDeUsuarios{
+    display: block;
+	width: 33%;
+    height: 90vh;
+	margin: 0;
+    background: rgb(236, 236, 236);
+    overflow-y: auto;
+    padding: 0%;
+}
+
+.CadastroDeUsuarios{
+    display: flex;
+    width: 67%;
+    height: 90vh;
+	margin: 0;
+    background: rgb(217, 217, 217);
+    overflow: hidden;
+    padding: 0%;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    flex-wrap: wrap;
+}

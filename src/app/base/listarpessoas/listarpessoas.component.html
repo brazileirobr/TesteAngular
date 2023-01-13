@@ -1,0 +1,17 @@
+<div class ="Lista">
+    <div *ngFor="let pes of pessoas">
+        <div *ngIf="!cadastro">
+            <div class ="ListaPessoas" [class.Selecionado]="pes === pessoa">
+                <a class="miniflex" >
+                    <div class="miniflexLEFT"  (click)="EditarCadastro(pes) ">
+                        <b class ="Nome">{{pes?.nome}}</b>
+                        <div class ="Idade">{{cadastrarIdades(pes)}}</div>
+                    </div>
+                    <div class="miniflexRIGHT">
+                        <button mat-mini-fab class="minibotao" (click)="excluirPessoa(pes)" >X</button>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

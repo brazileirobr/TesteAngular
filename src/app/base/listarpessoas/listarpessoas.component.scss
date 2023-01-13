@@ -1,0 +1,70 @@
+.Lista {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+}
+
+.ListaPessoas {
+
+    background: rgb(255, 255, 255);
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: 0px;
+}
+
+.Selecionado
+{
+    background-color: rgb(175, 206, 206) !important;
+    border-radius: 2px !important; 
+    border-color: black;
+}
+
+.Nome {
+    //display: flex;
+    color: rgb(120, 120, 120);
+    font-size: 1.2em;
+    //margin-left: 5%;
+    //margin-top: 2%;
+    //margin-bottom: 0%;
+    //padding: 0;
+}
+
+.Idade {
+    //display: flex;
+    color: rgb(120, 120, 120);
+    font-size: 0.8em;
+    //margin-left: 5%;
+    //margin-top: 0%;
+    //margin-bottom: 2%;
+    //padding: 0;
+}
+
+.miniflex{
+    display: flex;
+    flex-direction: row;
+}
+.miniflexLEFT{
+    display: flex;
+    flex-direction: column;    
+    justify-content: center !important;
+    width: 98%;
+}
+.miniflexRIGHT{
+    justify-content: flex-end;
+    display: flex;
+    transform: scale(0.5);
+}
+
+.minibotao{
+    border-radius: 10px;
+    background: rgb(255, 155, 155);
+    justify-content: space-around;
+    align-self: center;
+    border: 1px solid rgb(255, 0, 0);
+}

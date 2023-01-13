@@ -1,0 +1,20 @@
+.flexRight {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: space-between;
+    padding: 1.2%;
+    background-color: rgb(231, 231, 231);
+}
+
+.flexLeft{
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end !important;
+    justify-content: flex-end !important;
+    padding: 1.2%;
+    padding-right: 4%;
+    gap: 5%;
+    flex-shrink: unset;
+    background-color: rgb(231, 231, 231);
+}

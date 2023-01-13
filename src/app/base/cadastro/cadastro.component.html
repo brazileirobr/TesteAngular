@@ -1,0 +1,90 @@
+<section class="flex" *ngIf="(pessoa && (editar || cadastro))">
+  
+    <mat-form-field appearance="fill">
+        <mat-label> Nome </mat-label>
+        <input matInput type="text" name="nome" [(ngModel)]="pessoa.nome" minlength="4" maxlength="25"
+            placeholder="Fulano de Tal">
+    </mat-form-field>
+
+    <!-- {{pessoa.dataNascimento | json}} -->
+
+    <mat-form-field appearance="fill">
+        <mat-label>Data de Nascimento</mat-label>
+        <input matInput [matDatepicker]="Data" name="dataNascimento"
+         [(ngModel)]="pessoa.dataNascimento">
+         <mat-datepicker-toggle matIconSuffix [for]="Data"></mat-datepicker-toggle>
+        <mat-datepicker #Data></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input matInput type="text" name="cpf" 
+        [(ngModel)]="pessoa.cpf" minlength="11" 
+        placeholder="123.123.123-12"
+        mask="000.000.000-00"
+        (blur)="verificarCpf(pessoa.cpf)"
+        [disabled]="editar && pessoa.cpf">
+    </mat-form-field>
+
+    <div *ngIf="tipo == 1"  class="flex">
+        <mat-form-field appearance="fill">
+            <mat-label>ESPECIALIDADE</mat-label>
+            <input matInput type="text" name="ESPECIALIDADE" 
+            [(ngModel)]="dataProfessor.especialidade" minlength="1" 
+            placeholder="Ciencias">
+        </mat-form-field>
+
+       <section class="extra">
+            <mat-list role="list" *ngFor="let data of dataProfessor.conhecimentos" class="conhecimentos">
+            <mat-list-item role="Conhecimentos" *ngIf="data !== '' &&  data !== undefined && data !== null" 
+            (click)="inquisicao(data)">
+            <div class="text">{{data}}</div>
+            </mat-list-item>
+            </mat-list>
+        </section>
+
+        <section class="botao">
+        <mat-form-field appearance="fill">
+            <mat-label>Conhecimentos</mat-label>
+            <input matInput type="text" name="conhecimentos" 
+            [(ngModel)]="conhecimentotemporario" minlength="1" 
+            placeholder="Conhecimento">
+        </mat-form-field>
+         <button mat-mini-fab class="minibotao" extended 
+         (click)="busqueConhecimento()">
+            +
+        </button>
+    </section>
+
+    </div>
+
+    <div *ngIf="tipo == 2 " class="flex">
+        <mat-form-field appearance="fill">
+            <mat-label>Numero de Matricula</mat-label>
+            <input matInput type="text" name="NumeroDeMatricula" 
+            [(ngModel)]="dataAluno.numeroMatricula" minlength="1" 
+            placeholder="1234">
+        </mat-form-field>
+    </div>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Logradouro</mat-label>
+        <input matInput type="text" name="logradouro" [(ngModel)]="pessoa.endereco.logradouro" minlength="5" placeholder="Rua Tal e coisa">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Numero</mat-label>
+        <input matInput type="text" name="numero" [(ngModel)]="pessoa.endereco.numero" maxlength="5" placeholder="6055">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Municipio</mat-label>
+        <input matInput type="text" name="municipio" [(ngModel)]="pessoa.endereco.municipio" minlength="5"
+            placeholder="São Paulo">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>UF</mat-label>
+        <input matInput type="text" name="UF" [(ngModel)]="pessoa.endereco.uf" maxlength="2" placeholder="SP">
+    </mat-form-field>
+</section>

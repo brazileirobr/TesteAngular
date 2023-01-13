@@ -1,0 +1,12 @@
+<section class="flex">
+  
+  <section class="ListaDeUsuarios">
+    <app-listarpessoas (selected)="pessoaAtual = $event"></app-listarpessoas>
+  </section>
+
+  <section class="CadastroDeUsuarios">
+    <app-cadastro [pessoa]="pessoaAtual"
+    ></app-cadastro>
+  </section>
+
+</section>

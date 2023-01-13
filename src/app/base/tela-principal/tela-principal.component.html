@@ -1,0 +1,24 @@
+<div *ngIf="!editar && !cadastro"  class="flexRight">
+    <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Novo Cadastro</button>
+    <mat-menu #menu="matMenu">
+        <button mat-raised-button (click)="cadastrarNovo(1)"
+        >Professor</button>
+        <span style="flex: auto;"></span>
+        <button mat-raised-button (click)="cadastrarNovo(2)"
+        >Aluno</button>
+        <span style="flex: auto;"></span>
+    </mat-menu>
+</div>
+
+    <div *ngIf="editar" class="flexLeft" >
+        <button mat-raised-button color="primary" (click)="cancelarEdicao()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="salvarEdicao()">Salvar</button>
+    </div>
+    <div *ngIf="cadastro"  class="flexLeft" >
+        <button mat-raised-button color="primary" (click)="cancelarCadastro()">Cancelar</button>
+        <button mat-raised-button color="primary" (click)="salvarCadastro(pessoa)">Salvar</button>
+    </div>
+
+<div class="botton">
+    <app-cadastropessoas></app-cadastropessoas>
+</div>

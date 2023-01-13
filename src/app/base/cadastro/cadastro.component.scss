@@ -1,0 +1,47 @@
+.flex{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    max-width: 300px;
+    min-width: 300px;
+    flex:auto;
+    width: 100%;
+    align-content: center;
+    align-items: stretch;
+}
+
+.extra
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.conhecimentos
+{
+    background-color: rgb(150, 150, 150);
+    border-radius: 20%;
+    padding: 0;
+}
+.text{
+    color:white;
+}
+
+.botao{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.minibotao{
+    border-radius: 10px;
+    background: rgb(150, 150, 150);
+    justify-content: space-around;
+    align-self: center;
+    border: 1px solid rgb(78, 78, 78);
+}

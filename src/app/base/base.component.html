@@ -1,0 +1,17 @@
+<section class="flex">
+    <section class="container_Esquerdo">
+        <section class="bola"></section>
+
+        <button mat-raised-button class="botaobranco" routerLink="/tela-principal" routerLinkActive="botaoroxo active">
+            Cadastro Pessoa
+        </button>
+
+        <button mat-raised-button class="botaobranco" routerLink="/tarefas"  routerLinkActive="botaoroxo active">
+            Tarefas
+        </button>
+    </section>
+
+    <section class="container_Direito">
+        <router-outlet></router-outlet>
+    </section>
+</section>

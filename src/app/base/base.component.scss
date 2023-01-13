@@ -1,0 +1,74 @@
+.container_Esquerdo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    align-items: center;
+    width: 22vw;
+    height: 100vh;
+    margin: 0;
+    border: 0px solid rgb(172, 172, 172);
+    background: rgb(217, 217, 217);
+    overflow: hidden;
+}
+
+.container_Direito {
+    width: 78vw;
+    height: 100vh;
+    padding: 0%;
+    margin: 0;
+    border: 0px solid rgb(185, 185, 185);
+    background: lavender;
+    overflow: hidden;
+}
+
+.bola {
+
+    display: flex;
+    width: 130px;
+    height: 130px;
+    border-radius: 180px;
+    background-image: url('/src/assets/images/batata.png');
+    background: rgb(171, 171, 171);
+    padding: 10%;
+    justify-content: center;
+    border: 0px solid rgb(0, 0, 0);
+}
+
+.botaoroxo {
+    display: flex;
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(50, 1, 141) !important;
+    justify-content: space-around;
+    align-self: center;
+    border: 1px solid rgb(50, 1, 141);
+}
+
+.botaobranco {
+    display: flex;
+    width: 90%;
+    height: 50px;
+    border-radius: 10px;
+    background: rgb(192, 192, 192);
+    justify-content: space-around;
+    align-self: center;
+    border: 1px solid rgb(50, 1, 141);
+}
+
+
+
+.flex {
+    display: flex;
+}
+
+button[mat-raised-button] {
+    background: transparent !important;
+    color: indigo;
+
+    &.active {
+        background: indigo !important;
+        color: white;
+    }
+}
